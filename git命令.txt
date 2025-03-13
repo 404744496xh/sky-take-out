@@ -1,0 +1,18 @@
+﻿git config --global user.email "404744496@qq.com"
+git config user.name 404744496xh    
+
+//gitee地址
+https://gitee.com/xh404744496xh/note.git
+//github地址
+https://github.com/404744496xh/note.git
+
+git pull origin master
+
+提交当前所有文件
+git add .
+git commit -m "提交所有当前文件"
+git push origin master
+
+//强制拉取
+git reset --hard origin/master  
+git pull origin master
