@@ -8,6 +8,11 @@ sky:
     password: 123
   alioss:
     endpoint: oss-cn-beijing.aliyuncs.com
-    accessKeyId: *******
-    accessKeySecret: ************
+    accessKeyId: af2f2f2fs
+    accessKeySecret: asfdafad2
     bucketName: sky-take-out249
+  redis:
+    host: localhost
+    port: 6379
+    password: 123
+    database: 10
