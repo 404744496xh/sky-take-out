@@ -78,4 +78,12 @@ public interface DishMapper {
      */
     @Select("select dish.* from dish left join setmeal_dish as sd on sd.dish_id=dish.id where sd.setmeal_id=#{setmealId}")
     List<Dish> getBySetmealId(Long setmealId);
+
+    /**
+     * 修改菜品起售停售
+     * @param status
+     * @param id
+     */
+    @Update("update dish set status=#{status} where id=#{id}")
+    void updateStatus(Integer status, Long id);
 }

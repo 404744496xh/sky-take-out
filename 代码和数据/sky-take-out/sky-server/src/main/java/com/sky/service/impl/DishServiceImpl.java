@@ -8,7 +8,9 @@ import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
 import com.sky.entity.DishFlavor;
+import com.sky.entity.Setmeal;
 import com.sky.exception.DeletionNotAllowedException;
+import com.sky.exception.SetmealEnableFailedException;
 import com.sky.mapper.DishFlavorMapper;
 import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
@@ -189,5 +191,16 @@ public class DishServiceImpl implements DishService {
         }
 
         return dishVOList;
+    }
+
+    /**
+     * 修改菜品起售停售
+     * @param status
+     * @param id
+     */
+    @Override
+    public void updateStatus(Integer status, Long id) {
+        //修改菜品状态
+        dishMapper.updateStatus(status,id);
     }
 }
