@@ -46,7 +46,7 @@ public interface SetmealMapper {
      * @return
      */
     @Select("select setmeal.*,category.name category_name  from setmeal join category on category.id=setmeal.category_id where setmeal.id = #{id}")
-    SetmealVO getById(Long id);
+    Setmeal getById(Long id);
 
     /**
      * 根据id删除套餐

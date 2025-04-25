@@ -6,7 +6,6 @@ import com.sky.constant.MessageConstant;
 import com.sky.constant.StatusConstant;
 import com.sky.dto.SetmealDTO;
 import com.sky.dto.SetmealPageQueryDTO;
-import com.sky.entity.Dish;
 import com.sky.entity.Setmeal;
 import com.sky.entity.SetmealDish;
 import com.sky.exception.DeletionNotAllowedException;
@@ -96,8 +95,8 @@ public class SetmealServiceImpl implements SetmealService {
     public void deleteBatch(List<Long> ids) {
         // 判断当前菜品能否被删除
         for (Long id : ids){
-            SetmealVO setmealVO = setmealMapper.getById(id);
-            if (setmealVO.getStatus() == 1){
+            Setmeal setmeal = setmealMapper.getById(id);
+            if (setmeal.getStatus() == 1){
                 //起售中的菜品不能删除
                 throw new DeletionNotAllowedException(MessageConstant.SETMEAL_ON_SALE);
             }
