@@ -27,4 +27,12 @@ public interface UserMapper {
             "values (#{openid},#{name},#{createTime},#{sex},#{phone},#{idNumber},#{avatar})")
     @Options(useGeneratedKeys = true,keyProperty = "id")
     void insert(User user);
+
+    /**
+     * 根据id查询用户
+     * @param userId
+     * @return
+     */
+    @Select("select * from user where id=#{id}")
+    User getById(Long userId);
 }

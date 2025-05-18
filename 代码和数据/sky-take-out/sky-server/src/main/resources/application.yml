@@ -58,4 +58,8 @@ sky:
   wechart:
     app-id: ${sky.wechart.app-id}
     secret: ${sky.wechart.secret}
-
+  amap:
+    key: ${sky.amap.key}
+    secret: ${sky.amap.secret}
+  shop:
+    address: ${sky.shop.address}
